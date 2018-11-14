@@ -193,7 +193,7 @@
 
   SUBROUTINE GCHEM
 !
-    use cglow,only: jmax, nmaj, nex, nw, nc, kchem, sza, p, l, &
+    use cglow,only: jmax, nmaj, nex, nw, nc, kchem, sza, &
                     zz, zo, zn2, zo2, zno, zns, znd, ze, ztn, zti, zte, &
                     photoi, photod, phono, pia, sion, aglw, &
                     tei, tpi, tir, e=>ecalc, den=>zxden, zeta, zceta, vcb
@@ -205,7 +205,7 @@
     real ::   A(NR), B(NR), BZ(NR,JMAX), G(NR,JMAX), KZ(NR,JMAX), &
               OEI(JMAX), O2EI(JMAX), RN2EI(JMAX), &
               OPI(JMAX), O2PI(JMAX), RN2PI(JMAX), &
-              RN2ED(JMAX), SRCED(JMAX), OMINUS(JMAX), &
+              RN2ED(JMAX), SRCED(JMAX), P(NEX,JMAX), L(NEX,JMAX), OMINUS(JMAX), &
               T1(JMAX), T2(JMAX), T3(JMAX), T4(JMAX), T5(JMAX), &
               QQ(JMAX), RR(JMAX), SS(JMAX), TT(JMAX), UU(JMAX), &
               VV(JMAX), WW(JMAX), XX(JMAX)

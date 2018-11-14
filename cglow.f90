@@ -85,7 +85,7 @@ module cglow
   real,allocatable,dimension(:,:,:) :: photoi, photod              ! (nst,nmaj,jmax)
   real,allocatable,dimension(:,:)   :: phono                       ! (nst,jmax)
   real,allocatable,dimension(:,:,:) :: aglw                        ! (nei,nmaj,jmax)
-  real,allocatable,dimension(:,:)   :: zxden,p,l                   ! (nex,jmax)
+  real,allocatable,dimension(:,:)   :: zxden                       ! (nex,jmax)
   real,allocatable,dimension(:,:)   :: zeta                        ! (nw,jmax)
   real,allocatable,dimension(:,:,:) :: zceta                       ! (nc,nw,jmax)
   real,allocatable,dimension(:)     :: vcb                         ! (nw)
@@ -127,8 +127,6 @@ module cglow
 
     allocate              &
       (zxden(nex,jmax),   &
-       p(nex,jmax),       &
-       l(nex,jmax),       &
        zeta(nw,jmax),     &
        zceta(nc,nw,jmax), &
        vcb(nw),           &
@@ -266,8 +264,6 @@ module cglow
        tb  (:,:)    =0.
        gams(:,:)    =0.
        gamb(:,:)    =0.
-       p(:,:)       =0.
-       l(:,:)       =0.
 
   end subroutine cglow_init
 
